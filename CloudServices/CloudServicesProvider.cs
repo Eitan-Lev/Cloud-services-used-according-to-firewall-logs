@@ -1,9 +1,14 @@
 using System.Globalization;
 using CsvHelper;
 
-public class CloudServicesProvider
+public class CloudServicesProvider : ICloudServicesProvider
 {
     public List<CloudServiceEntry> CloudServiceEntries { get; set; }
+
+    public CloudServicesProvider()
+    {
+        CloudServiceEntries = new List<CloudServiceEntry>();
+    }
 
     public void LoadCloudServicesFromFile(string pathToFile)
     {

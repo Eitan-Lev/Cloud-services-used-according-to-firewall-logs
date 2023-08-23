@@ -1,7 +1,7 @@
 Service name,Service domain,Risk,Country of origin,GDPR Compliant
-Google Drive,drive.google.com,Medium,US,Yes
-Salesforce,www.salesforce.com,Low,US,Yes
+Google Drive,drive.google.com,Medium,Ireland,Yes
+Salesforce,www.salesforce.com,Low,England,Yes
 Azure,portal.azure.com,Low,US,Yes
-AWS,aws.amazon.com,Low,US,Yes
+AWS,aws.amazon.com,Low,France,Yes
 Yandex,www.yandex.ru,High,Russia,No
-Dropbox,www.dropbox.com,Medium,US,Yes
+Dropbox,www.dropbox.com,Medium,Israel,Yes

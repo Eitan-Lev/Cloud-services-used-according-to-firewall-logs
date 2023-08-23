@@ -12,18 +12,15 @@ public class CloudservicesProviderTests
     }
 
     [Fact]
-    public void VerifyCorrectCountOfItems()
-    {
-        _cloudServicesProvider.LoadCloudServicesFromFile(@"c:\GitRepos\WizExcersize\Cloud-services-used-according-to-firewall-logs\tests\CloudServices\TestsInput\ServiceDBInput_basic.csv");
-
-        _cloudServicesProvider.CloudServiceEntries.Should().HaveCount(6);
-    }
-
-    [Fact]
     public void ValidateParsingOfCsv()
     {
         _cloudServicesProvider.LoadCloudServicesFromFile(@"c:\GitRepos\WizExcersize\Cloud-services-used-according-to-firewall-logs\tests\CloudServices\TestsInput\ServiceDBInput_standard.csv");
 
         _cloudServicesProvider.CloudServiceEntries.Should().HaveCount(6);
+        _cloudServicesProvider.CloudServiceEntries[2].Risk.Should().Be(Risk.Low);
+        _cloudServicesProvider.CloudServiceEntries[2].CountryOfOrigin.Should().Be("US");
+        _cloudServicesProvider.CloudServiceEntries[2].ServiceName.Should().Be("Azure");
+        _cloudServicesProvider.CloudServiceEntries[2].GDPRCompliant.Should().Be(true);
+
     }
 }
