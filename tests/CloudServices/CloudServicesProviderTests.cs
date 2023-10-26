@@ -14,7 +14,7 @@ public class CloudservicesProviderTests
     [Fact]
     public void ValidateParsingOfCsv()
     {
-        _cloudServicesProvider.LoadCloudServicesFromFile(@"c:\GitRepos\WizExcersize\Cloud-services-used-according-to-firewall-logs\tests\CloudServices\TestsInput\ServiceDBInput_standard.csv");
+        _cloudServicesProvider.LoadCloudServicesFromFile(@"C:\Personal\Git\Cloud-services-used-according-to-firewall-logs\tests\CloudServices\TestsInput\ServiceDBInput_standard.csv");
 
         _cloudServicesProvider.CloudServiceEntries.Should().HaveCount(6);
         _cloudServicesProvider.CloudServiceEntries[2].Risk.Should().Be(Risk.Low);

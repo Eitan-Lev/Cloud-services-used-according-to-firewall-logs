@@ -21,5 +21,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CloudServices\CloudServices.csproj" />
+    <ProjectReference Include="..\Firewall\Firewall.csproj" />
   </ItemGroup>
 </Project>
